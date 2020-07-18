@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Leaflet Web Map</title>
+<link rel="stylesheet" href="css/style.css">  
+
+<link rel="stylesheet" href="/css/leaflet.css" />
+
+<script src="/js/leaflet.js"></script>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- set width and height styles for map -->
+<style>
+#map {
+    height: 75vh;
+}
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+</style>
+
+</head>
+
+<body>
+		<div id="info">
+            <br><br>
+            <b>Sarvesh Thakur</b><br>
+            <h5>Use click and drag to pan. Use scroll to zoom in and out.<br> This is a leaflet map used to show some famous places in Lonavla using clickable markers.<br>Click on marker to open its name of location.</h5>
+		</div>
+
+    <!-- place holder for map -->
+       <div class="main-div">
+ <div id="map"></div>
+    </div>
+<script>
+
+    // create map object, tell it to live in 'map' div and provide center and zoom option values 
+    var map = L.map('map',{
+    center: [18.77, 73.4],
+    zoom: 13,
+    zoomControl: false
+    
+    });
+    L.control.zoom({
+     position:'bottomright'
+}).addTo(map);
+
+    // add base map tiles from OpenStreetMap and attribution info to 'map' div
+   // L.tileLayer('http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    // }).addTo(map);
+var OpenStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+    opacity: 0.5,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+    //add marker
+    
+var marker = L.marker([18.6963545754601,73.386161327362]).addTo(map);       var popup = marker.bindPopup('<b>Tiger Point</b>');
+var marker1 = L.marker([18.752199458304,73.4029197692871 ]).addTo(map);		var popup = marker1.bindPopup('<b>Sunils Celebrity Wax Museum</b>');
+var marker2 = L.marker([18.782286,73.389049 ]).addTo(map);	             	var popup = marker2.bindPopup('<b>Della Adventure Park</b>');
+var marker3 = L.marker([18.7752798673523,73.4097862243652 ]).addTo(map);	var popup = marker3.bindPopup('<b>Tungarli Lake</b>');
+var marker4 = L.marker([18.7763159735904,73.4307718276977 ]).addTo(map);	var popup = marker4.bindPopup('<b>Valvan Dam</b>');
+var marker5 = L.marker([18.7703176428108,73.3649316430091 ]).addTo(map);	var popup = marker5.bindPopup('<b>Khandala Sunset Point</b>');
+var marker6 = L.marker([18.753489687739,73.4033972024917 ]).addTo(map);		var popup = marker6.bindPopup('<b>Kumar Resort</b>');
+    
+
+ 
+</script>
+<a href="index.html" class="float">
+<i class="fa fa-home my-float"></i>
+</a>
+
+</body>
+
+</html>

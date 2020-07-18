@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  align: 'center'
+  width: 100%;
+  overflow: visible;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#555;
+  background: #ecf0f3; 
+}
+.main-div {
+  margin:30px; width: 80vw;  max-width: 700px;
+  min-height: 100px;
+  padding: 35px 35px 35px 35px;
+  border-radius: 40px;
+  background: #ecf0f3;
+  box-shadow: 13px 13px 20px #cbced1,
+              -13px -13px 20px #ffffff;
+}
+.photo {
+  background:url("../images/photo.jpg");
+  width:150px;
+  height: 150px;
+  border-radius: 50%;
+  align-self: center;
+  margin:0 auto;
+  box-shadow: 
+  /* logo shadow */
+  0px 0px 2px #5f5f5f,
+  /* offset */
+  0px 0px 0px 5px #ecf0f3,
+  /*bottom right */
+  8px 8px 15px #a7aaaf,
+  /* top left */
+  -8px -8px 15px #ffffff
+  ;
+}
+.title {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 24px;
+  letter-spacing: 0.5px;
+}
+.sub-title {
+  text-align: center;
+  font-size: 15px;
+  padding-top: 7px;
+  letter-spacing: 3px;
+}
+.description {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 7px;
+  letter-spacing: 0.8px;
+}
+
+.Click-button {
+  outline: none;
+  border:none;
+  cursor: pointer;
+  width:100%;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  color:#000000;
+  text-align: center;
+  background: #00ff80;
+  box-shadow: 5px 5px 10px #b1b1b1,
+              -5px -5px 10px #ffffff;
+  transition: 1s;
+}
+.Click-button:hover {
+  background:#ffffff;
+}
+.Click-button:active {
+  background:#1da88a;
+}
+.link {
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+
+.linebreak {padding-bottom:50px; display:block;}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	top:40px;
+	left:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+#info {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1; /* TODO Solve this in HTML */
+}
+
+.collapsible {
+  background-color: #777;
+  color: #00ff80;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #ffffff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
