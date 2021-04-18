@@ -126,7 +126,7 @@ path {
     fill: #000;
     stroke-dasharray: 350;
     opacity: 1;
-    animation: animate 5s infinite cubic-bezier(.42,0,.58,1);
+    animation: animate 5s 3 cubic-bezier(.42,0,.58,1);
 }
 
 @keyframes animate{
